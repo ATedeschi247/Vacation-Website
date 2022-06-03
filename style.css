@@ -31,9 +31,40 @@ div.item.active {
 }
 
 nav.navbar {
-  background-color: #678FFE !important;
-  border-color: #678FFE !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
 }
 .navbar-nav > .active > a {
-  
+  background-color: transparent !important;
+  color: black !important;
+}
+
+nav.navbar.navbar-inverse {
+  margin-bottom: -2px;
+  margin-top: -2px;
+}
+
+.carousel-caption {
+  padding-bottom: 9%;
+  display: block !important;
+}
+
+div.carousel-caption > h1 {
+  font-size: 60px;
+}
+
+div.carousel-caption > i {
+  font-size: 19px;
+}
+
+nav.navbar > div.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+nav.navbar {
+  padding: 0.5rem 1rem;
 }
