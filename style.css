@@ -22,14 +22,20 @@ footer {
   display: none;
 }
 }
-
+@media (max-width: 767px) {
+  .navbar-fixed-top {
+    position: relative;
+  }
+  div.nav-background {
+    background-color: #a0cef6;
+  }
+}
 div.item.active > img {
   overflow: hidden;
 }
 div.item.active {
   margin-bottom: -2%;
 }
-
 nav.navbar {
   background-color: transparent !important;
   border-color: transparent !important;
