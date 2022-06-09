@@ -74,3 +74,7 @@ nav.navbar > div.container-fluid {
 nav.navbar {
   padding: 0.5rem 1rem;
 }
+
+.align-left {
+  text-align: left;
+}
