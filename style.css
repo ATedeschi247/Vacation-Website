@@ -78,3 +78,23 @@ nav.navbar {
 .align-left {
   text-align: left;
 }
+html {
+  scroll-behavior: smooth;
+}
+div.attraction img {
+  width: 100%;
+  height: auto;
+}
+.attraction-caption {
+  background-color: white;
+  padding: 20px;
+}
+ body {
+   background-color: #f8f9fa;
+ }
+.attraction-caption > p {
+  text-align: center !important;
+}
+.italic {
+  font-style: italic;
+}
