@@ -25,7 +25,7 @@
   <body>
     <div class="nav-background">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -41,9 +41,6 @@
             <li><a href="#history">History</a></li>
             <li><a href="#activities">Activities</a></li>
             <li><a href="#">Links</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           </ul>
         </div>
       </div>
@@ -100,7 +97,7 @@
         travel guide of Rome. Explore the colosseum and its history, marvel at
         the Vatican, and immerse yourself in all of the sights and sounds in between.<br>
         Are you ready?</p>
-        <br><br>
+
       <div id="history">
         <div class="page-header text-center">
           <h1>History</h1>
@@ -155,7 +152,7 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="attraction">
-            <div class="attraction-image">
+            <div class="attraction-image" onclick="showColosseum()">
               <img src="https://cdn.britannica.com/36/162636-050-932C5D49/Colosseum-Rome-Italy.jpg" alt="The Roman Colosseum">
             </div>
             <div class="attraction-caption">
@@ -166,7 +163,7 @@
         </div>
         <div class="col-sm-4">
           <div class="attraction">
-            <div class="attraction-image">
+            <div class="attraction-image" onclick="showPantheon()">
               <img src="https://media.cntraveler.com/photos/59d0df3249b1470c74ce83ea/16:9/w_2560%2Cc_limit/GettyImages-88434895.jpg" alt="The Roman Pantheon">
             </div>
             <div class="attraction-caption">
@@ -177,21 +174,178 @@
         </div>
         <div class="col-sm-4">
           <div class="attraction">
-            <div class="attraction-image">
-              <img src="" alt="">
+            <div class="attraction-image" onclick="showTrevi()">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg" alt="Trevi Fountain">
             </div>
             <div class="attraction-caption">
-              <p></p>
-              <p class="italic"></p>
+              <p>Trevi Fountain</p>
+              <p class="italic">Better than the water fountains at school...</p>
             </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="attraction">
+            <div class="attraction-image" onclick="showVatican()">
+              <img src="https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc4NjAyNzEyOTUwMDg5/hith-10-things-you-may-not-know-about-the-vatican-2.jpg" alt="The Vatican">
+            </div>
+            <div class="attraction-caption">
+              <p>The Vatican</p>
+              <p class="italic">Technically a country!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="attraction">
+            <div class="attraction-image" onclick="showBasilica()">
+              <img src="https://lp-cms-production.imgix.net/2021-04/shutterstockRF_1103683187.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850" alt="St. Peter's Basilica">
+            </div>
+            <div class="attraction-caption">
+              <p>St. Peter's Basilica</p>
+              <p class="italic">A big, beautiful Church</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="attraction">
+            <div class="attraction-image" onclick="showForum()">
+              <img src="https://media.cntraveler.com/photos/5a95c4a43e9f9737bfc6d225/16:9/w_2560,c_limit/Roman-Forum_2018_GettyImages-492161541.jpg" alt="The Roman Forum">
+            </div>
+            <div class="attraction-caption">
+              <p>The Roman Forum</p>
+              <p class="italic">As far as REALLY old buildings go, these are pretty darn intact...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="colosseum" class="attraction-expandable">
+        <h1>The Colosseum</h1>
+        <div class="row">
+          <div class="col-sm-8">
+            <p>The Colosseum is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world today, despite its age. Construction began under the emperor Vespasian (r. 69–79 AD) in 72 and was completed in 80 AD under his successor and heir, Titus (r. 79–81). Further modifications were made during the reign of Domitian (r. 81–96). The three emperors that were patrons of the work are known as the Flavian dynasty, and the amphitheatre was named the Flavian Amphitheatre by later classicists and archaeologists for its association with their family name (Flavius).</p>
+            <p class="citation">Source: Wikipedia (<a target="_blank" href="https://en.wikipedia.org/wiki/Colosseum">https://en.wikipedia.org/wiki/Colosseum</a>)</p>
+            <p class="citation">Image: <a target="_blank" href="https://cdn.britannica.com/36/162636-050-932C5D49/Colosseum-Rome-Italy.jpg">https://cdn.britannica.com/36/162636-050-932C5D49/Colosseum-Rome-Italy.jpg</a></p>
+          </div>
+          <div class="col-sm-4">
+            <img src="https://cdn.britannica.com/36/162636-050-932C5D49/Colosseum-Rome-Italy.jpg" alt="The Colosseum">
+          </div>
+        </div>
+      </div>
+      <div id="pantheon" class="attraction-expandable">
+        <h1>The Pantheon</h1>
+        <div class="row">
+          <div class="col-sm-8">
+            <p>The Pantheon is a former Roman temple and since 609 AD, a Catholic church (Basilica di Santa Maria ad Martyres or Basilica of St. Mary and the Martyrs), in Rome, Italy, on the site of an earlier temple commissioned by Marcus Agrippa during the reign of Augustus (27 BC – 14 AD). It was rebuilt by the emperor Hadrian and probably dedicated c. 126 AD. Its date of construction is uncertain, because Hadrian chose not to inscribe the new temple but rather to retain the inscription of Agrippa's older temple, which had burned down.</p>
+            <p class="citation">Source: Wikipedia (<a target="_blank" href="https://en.wikipedia.org/wiki/Pantheon,_Rome">https://en.wikipedia.org/wiki/Pantheon,_Rome</a>)</p>
+            <p class="citation">Image: <a target="_blank" href="https://media.cntraveler.com/photos/59d0df3249b1470c74ce83ea/16:9/w_2560%2Cc_limit/GettyImages-88434895.jpg">https://media.cntraveler.com/photos/59d0df3249b1470c74ce83ea/16:9/w_2560%2Cc_limit/GettyImages-88434895.jpg</a></p>
+          </div>
+          <div class="col-sm-4">
+            <img src="https://media.cntraveler.com/photos/59d0df3249b1470c74ce83ea/16:9/w_2560%2Cc_limit/GettyImages-88434895.jpg" alt="The Pantheon">
+          </div>
+        </div>
+      </div>
+      <div id="trevi" class="attraction-expandable">
+        <h1>Trevi Fountain</h1>
+        <div class="row">
+          <div class="col-sm-8">
+            <p>The Trevi Fountain (Italian: Fontana di Trevi) is an 18th-century fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini and several others. Standing 26.3 metres (86 ft) high and 49.15 metres (161.3 ft) wide, it is the largest Baroque fountain in the city and one of the most famous fountains in the world.</p>
+            <p class="citation">Source: Wikipedia (<a target="_blank" href="https://en.wikipedia.org/wiki/Trevi_Fountain">https://en.wikipedia.org/wiki/Trevi_Fountain</a>)</p>
+            <p class="citation">Image: <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg">https://upload.wikimedia.org/wikipedia/commons/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg</a></p>
+          </div>
+          <div class="col-sm-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg" alt="Trevi Fountain">
+          </div>
+        </div>
+      </div>
+      <div id="Vatican" class="attraction-expandable">
+        <h1>The Vatican</h1>
+        <div class="row">
+          <div class="col-sm-8">
+            <p>Vatican City, officially the Vatican City State (Italian: Stato della Città del Vaticano; Latin: Status Civitatis Vaticanae), is an independent city-state and enclave surrounded by Rome, Italy. The Vatican City State, also known simply as the Vatican, became independent from Italy with the Lateran Treaty (1929), and it is a distinct territory under "full ownership, exclusive dominion, and sovereign authority and jurisdiction" of the Holy See, itself a sovereign entity of international law, which maintains the city state's temporal, diplomatic, and spiritual independence. With an area of 49 hectares (121 acres) and a population of about 453, it is the smallest state in the world by both area and population. As governed by the Holy See, the Vatican City State is an ecclesiastical or sacerdotal-monarchical state (a type of theocracy) ruled by the pope who is the bishop of Rome and head of the Catholic Church. The highest state functionaries are all Catholic clergy of various national origins. After the Avignon Papacy (1309–1377) the popes have mainly resided at the Apostolic Palace within what is now Vatican City, although at times residing instead in the Quirinal Palace in Rome or elsewhere.</p>
+            <p class="citation">Source: Wikipedia (<a target="_blank" href="https://en.wikipedia.org/wiki/Vatican_City">https://en.wikipedia.org/wiki/Vatican_City</a>)</p>
+            <p class="citation">Image: <a target="_blank" href="https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc4NjAyNzEyOTUwMDg5/hith-10-things-you-may-not-know-about-the-vatican-2.jpg">https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc4NjAyNzEyOTUwMDg5/hith-10-things-you-may-not-know-about-the-vatican-2.jpg</a></p>
+          </div>
+          <div class="col-sm-4">
+            <img src="https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc4NjAyNzEyOTUwMDg5/hith-10-things-you-may-not-know-about-the-vatican-2.jpg" alt="The Vatican">
+          </div>
+        </div>
+      </div>
+      <div id="Basilica" class="attraction-expandable">
+        <h1>St. Peter's Basilica</h1>
+        <div class="row">
+          <div class="col-sm-8">
+            <p>The Papal Basilica of Saint Peter in the Vatican (Italian: Basilica Papale di San Pietro in Vaticano), or simply Saint Peter's Basilica (Latin: Basilica Sancti Petri), is a church built in the Renaissance style located in Vatican City, the papal enclave that is within the city of Rome, Italy. It was initially planned by Pope Nicholas V and then Pope Julius II to replace the aging Old St. Peter's Basilica, which was built in the fourth century by Roman emperor Constantine the Great. Construction of the present basilica began on 18 April 1506 and was completed on 18 November 1626.</p>
+            <p class="citation">Source: Wikipedia (<a target="_blank" href="https://en.wikipedia.org/wiki/St._Peter%27s_Basilica">https://en.wikipedia.org/wiki/St._Peter%27s_Basilica</a>)</p>
+            <p class="citation">Image: <a target="_blank" href="https://lp-cms-production.imgix.net/2021-04/shutterstockRF_1103683187.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850">https://lp-cms-production.imgix.net/2021-04/shutterstockRF_1103683187.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850</a></p>
+          </div>
+          <div class="col-sm-4">
+            <img src="https://lp-cms-production.imgix.net/2021-04/shutterstockRF_1103683187.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850" alt="St. Peter's Basilica">
+          </div>
+        </div>
+      </div>
+      <div id="forum" class="attraction-expandable">
+        <h1>The Roman Forum</h1>
+        <div class="row">
+          <div class="col-sm-8">
+            <p>The Roman Forum, also known by its Latin name Forum Romanum (Italian: Foro Romano), is a rectangular forum (plaza) surrounded by the ruins of several important ancient government buildings at the center of the city of Rome. Citizens of the ancient city referred to this space, originally a marketplace, as the Forum Magnum, or simply the Forum.</p>
+            <p class="citation">Source: Wikipedia (<a target="_blank" href="https://en.wikipedia.org/wiki/Roman_Forum">https://en.wikipedia.org/wiki/Roman_Forum</a>)</p>
+            <p class="citation">Image: <a target="_blank" href="https://media.cntraveler.com/photos/5a95c4a43e9f9737bfc6d225/16:9/w_2560,c_limit/Roman-Forum_2018_GettyImages-492161541.jpg">https://media.cntraveler.com/photos/5a95c4a43e9f9737bfc6d225/16:9/w_2560,c_limit/Roman-Forum_2018_GettyImages-492161541.jpg</a></p>
+          </div>
+          <div class="col-sm-4">
+            <img src="https://media.cntraveler.com/photos/5a95c4a43e9f9737bfc6d225/16:9/w_2560,c_limit/Roman-Forum_2018_GettyImages-492161541.jpg" alt="The Roman Forum">
           </div>
         </div>
       </div>
     </div><br>
 
     <footer class="container-fluid text-center">
-      <p>Banner image:<br> https://image.shutterstock.com/image-photo/panorama-rome-basilica-st-peter-260nw-443405575.jpg</p>
+      <p>Banner image:<br>https://image.shutterstock.com/image-photo/panorama-rome-basilica-st-peter-260nw-443405575.jpg</p>
     </footer>
+<script>
+window.addEventListener("scroll", function(){
+  if(window.scrollY > 0) {
+    document.getElementById('navbar').className = "navbar navbar-inverse navbar-fixed-top background";
+  } else {
+    document.getElementById('navbar').className = "navbar navbar-inverse navbar-fixed-top";
+  }
+});
 
+
+  function hideAll() {
+    document.getElementById('colosseum').style.display = "none";
+    document.getElementById('pantheon').style.display = "none";
+    document.getElementById('trevi').style.display = "none";
+    document.getElementById('Vatican').style.display = "none";
+    document.getElementById('Basilica').style.display = "none";
+    document.getElementById('forum').style.display = "none";
+  }
+
+  function showColosseum() {
+    hideAll();
+    document.getElementById('colosseum').style.display = "block";
+  }
+  function showPantheon() {
+    hideAll();
+    document.getElementById('pantheon').style.display = "block";
+  }
+  function showTrevi() {
+    hideAll();
+    document.getElementById('trevi').style.display = "block";
+  }
+  function showVatican() {
+    hideAll();
+    document.getElementById('Vatican').style.display = "block";
+  }
+  function showBasilica() {
+    hideAll();
+    document.getElementById('Basilica').style.display = "block";
+  }
+  function showForum() {
+    hideAll();
+    document.getElementById('forum').style.display = "block";
+  }
+</script>
   </body>
 </html>

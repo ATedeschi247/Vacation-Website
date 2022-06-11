@@ -2,8 +2,11 @@
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
+  transition: background-color 0.3s;
 }
-
+.navbar.background {
+  background-color: white !important;
+}
 /* Add a gray background color and some padding to the footer */
 footer {
   background-color: #f2f2f2;
@@ -27,7 +30,7 @@ footer {
     position: relative;
   }
   div.nav-background {
-    background-color: #a0cef6;
+    background-color: #fff;
   }
 }
 div.item.active > img {
@@ -81,9 +84,16 @@ nav.navbar {
 html {
   scroll-behavior: smooth;
 }
-div.attraction img {
-  width: 100%;
+div.attraction-image > img {
   height: auto;
+  cursor: pointer;
+  transition: filter 0.5s;
+}
+div.attraction-image:hover > img {
+  filter: brightness(130%);
+}
+img {
+  width: 100%;
 }
 .attraction-caption {
   background-color: white;
@@ -97,4 +107,7 @@ div.attraction img {
 }
 .italic {
   font-style: italic;
+}
+div.attraction-expandable {
+  display: none;
 }
