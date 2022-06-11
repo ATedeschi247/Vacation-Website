@@ -1,3 +1,23 @@
+h1 {
+  font-family: 'Caesar Dressing';
+}
+div.attraction-caption > p:not(.italic) {
+  font-family: "Spectral SC";
+}
+nav a {
+  font-family: 'Spectral SC';
+  transition: color 0.3s;
+}
+p, p.italic, li, i {
+  font-family: 'Libre Bodoni';
+}
+div#myCarousel h1 {
+  font-family: 'Spectral SC';
+  font-size: 70px;
+}
+p:not(.italic), li {
+  font-size: 18px;
+}
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
   margin-bottom: 0;
@@ -5,7 +25,16 @@
   transition: background-color 0.3s;
 }
 .navbar.background {
-  background-color: white !important;
+  background-color: #f8f9fa !important;
+}
+.navbar:not(.background) a:not(.navbar-brand) {
+  color: #00394d !important;
+}
+nav a:not(.navbar-brand):hover {
+  color: initial !important;
+}
+a.navbar-brand {
+  color: transparent !important;
 }
 /* Add a gray background color and some padding to the footer */
 footer {
@@ -30,7 +59,7 @@ footer {
     position: relative;
   }
   div.nav-background {
-    background-color: #fff;
+    background-color: #e1e6ea;
   }
 }
 div.item.active > img {
